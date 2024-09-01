@@ -1,0 +1,10 @@
+Flask
+SQLAlchemy
+pandas
+Flask-SQLAlchemy
+matplotlib
+nltk
+spacy
+scikit-learn
+vaderSentiment
+flask-cors

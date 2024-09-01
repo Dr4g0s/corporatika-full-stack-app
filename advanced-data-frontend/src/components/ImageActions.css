@@ -1,0 +1,93 @@
+.image-actions {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.histogram-section {
+    margin-bottom: 20px;
+}
+
+.histogram-bars {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto; /* Ensure overflow content is scrollable */
+    max-height: 500px; /* Limit the height of the histogram */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.histogram-section {
+    margin-bottom: 20px;
+}
+
+.histogram-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.histogram-bars {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 100%; /* Ensure the histogram bars fit within the container */
+}
+
+.histogram-bars::-webkit-scrollbar {
+    height: 8px;
+}
+
+.histogram-bars::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.histogram-bars::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
