@@ -26,8 +26,8 @@ This project involves a backend API and a frontend application. The backend is b
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
-    cd your-repository/advanced-data-app
+    git clone https://github.com/Dr4g0s/corporatika-full-stack-app
+    cd corporatika-full-stack-app/advanced-data-app
     ```
 
 2. **Create a Virtual Environment**
@@ -78,7 +78,7 @@ This project involves a backend API and a frontend application. The backend is b
 1. **Navigate to the Frontend Directory**
 
     ```bash
-    cd your-repository/advanced-data-frontend
+    cd corporatika-full-stack-app/advanced-data-frontend
     ```
 
 2. **Install Dependencies**
