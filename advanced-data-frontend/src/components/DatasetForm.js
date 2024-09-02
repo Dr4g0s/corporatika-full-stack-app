@@ -32,7 +32,7 @@ const DatasetForm = ({ onSuccess }) => {
                 required
             />
             <textarea
-                placeholder="Enter JSON data"
+                placeholder="Enter a list of JSON data [{key: val}, {key: val}, ...]"
                 value={jsonData}
                 onChange={(e) => setJsonData(e.target.value)}
                 rows="10"

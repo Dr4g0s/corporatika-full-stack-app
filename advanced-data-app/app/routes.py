@@ -257,6 +257,16 @@ def tsne_visualization():
         static_folder = os.path.join(
             os.path.dirname(os.path.abspath(__file__)), '..', 'static'
         )
+
+        filename = f"tsne_plot.png"
+        path = os.path.join(static_folder, filename)
+        with open(path, "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+        
+        return jsonify({
+            "image": encoded_string,
+        })
+    
         return send_from_directory(static_folder, 'tsne_plot.png')
     
     except Exception as e:

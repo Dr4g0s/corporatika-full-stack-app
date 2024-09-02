@@ -60,10 +60,10 @@ const DatasetDetail = () => {
       {dataset && (
         <div>
           <h2 className="text-xl font-semibold mb-4">Dataset: {dataset.name}</h2>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h3 className="text-lg font-medium">Dataset Details:</h3>
             <pre className="bg-gray-100 p-2 rounded">{JSON.stringify(dataset, null, 2)}</pre>
-          </div>
+          </div> */}
 
           {/* Toggle Button for Statistics */}
           <div className="mb-4">

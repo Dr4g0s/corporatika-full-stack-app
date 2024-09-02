@@ -11,10 +11,10 @@ const ManipulateImageForm = ({ onSubmit }) => {
     };
 
     return (
-        <div style={{ marginBottom: '20px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px', maxWidth: '300px' }}>
+        <div style={{ marginBottom: '20px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px'}}>
             <h3 style={{ marginBottom: '15px' }}>Manipulate Image</h3>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
-                <label style={{ marginBottom: '10px' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'row' }}>
+                <label style={{ marginRight: '10px' }}>
                     <span style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Width:</span>
                     <input
                         type="number"
@@ -24,7 +24,7 @@ const ManipulateImageForm = ({ onSubmit }) => {
                         style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
                     />
                 </label>
-                <label style={{ marginBottom: '20px' }}>
+                <label style={{ marginRight: '20px' }}>
                     <span style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Height:</span>
                     <input
                         type="number"
@@ -37,7 +37,8 @@ const ManipulateImageForm = ({ onSubmit }) => {
                 <button
                     type="submit"
                     style={{
-                        padding: '10px 15px',
+                        marginTop: '29px',
+                        padding: '0px 70px',
                         border: 'none',
                         borderRadius: '4px',
                         backgroundColor: '#007bff',
@@ -45,6 +46,7 @@ const ManipulateImageForm = ({ onSubmit }) => {
                         fontSize: '16px',
                         cursor: 'pointer',
                         transition: 'background-color 0.3s',
+                        maxHeight: '40px'
                     }}
                     onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
                     onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007bff')}

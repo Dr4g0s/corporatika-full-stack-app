@@ -31,13 +31,7 @@ const TextAnalysisForm = ({ onSuccess }) => {
                     response = await visualizeTsne(texts);
 
                     if (response && response.data){
-                        let decoded = response.data.replace(/%([0-9A-F]{2})/g, (_, p1) => String.fromCharCode('0x' + p1));
-                        let bytes = new Uint8Array(decoded.length);
-                        for (let i = 0; i < decoded.length; i++) {
-                            bytes[i] = decoded.charCodeAt(i);
-                        }
-                        let base64 = btoa(String.fromCharCode.apply(null, bytes));
-                        const tsneImageUrl = `data:image/png;base64,${base64}`
+                        const tsneImageUrl = `data:image/png;base64,${response.data.image}`
                         setTsnePlot(tsneImageUrl);
                     } else {
                         throw new Error('Invalid T-SNE plot data');

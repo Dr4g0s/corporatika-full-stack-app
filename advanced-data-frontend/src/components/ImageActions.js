@@ -13,6 +13,7 @@ const ImageActions = ({ filename }) => {
         manipulation: null
     });
     const [showManipulateForm, setShowManipulateForm] = useState(false);
+    const [activeAction, setActiveAction] = useState(null);
 
     const handleAction = async (action, data={}) => {
         try {
@@ -27,6 +28,8 @@ const ImageActions = ({ filename }) => {
                 ...prevResult,
                 [action]: response.data
             }));
+
+            setActiveAction(action);
         } catch (error) {
             console.error(`Error performing ${action} on image:`, error);
         }
@@ -43,16 +46,15 @@ const ImageActions = ({ filename }) => {
                 <button onClick={() => handleAction('histogram')} className="action-button">Generate Histogram</button>
                 <button onClick={() => {setShowManipulateForm(true);}}>Manipulate Image</button>
                 <button onClick={() => handleAction('segmentation')} className="action-button">Generate Segmentation</button>
-
+            </div>
+            <div>
                 {showManipulateForm && <ManipulateImageForm onSubmit={handleManipulateSubmit} />}
-
-
             </div>
             {result && (
                 <div className="result-container">
-                    {result.histogram && <Histogram data={result.histogram} />}
-                    {result && result.segmentation && <SegmentationMask imageBase64={result.segmentation.image} />}
-                    {result && result.manipulate && <ManipulatedImage image={result.manipulate.image} />}
+                    {activeAction === 'histogram' && result.histogram && <Histogram data={result.histogram} />}
+                    {activeAction === 'segmentation' && result && result.segmentation && <SegmentationMask imageBase64={result.segmentation.image} />}
+                    {activeAction === 'manipulate' && result && result.manipulate && <ManipulatedImage image={result.manipulate.image} />}
                 </div>
             )}
         </div>
